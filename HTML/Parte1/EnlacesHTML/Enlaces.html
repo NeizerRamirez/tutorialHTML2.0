@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces en HTML</title>
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte1/EnlacesHTML/Enlaces.png" width="100%" alt="prologo" >
+    </header>
+
+    <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="3%" height="3%" alt="Volver al inicio"> </a> 
+    
+    <p>> <a href="/HTML/Principal.html">Manual de HTML</a></p>
+
+    <br>
+
+    <img src="/Imagenes/calendario.png">
+    <p>02 de octubre de 2016</p>
+
+    <h3>Vemos qué son los enlaces en HTML y los distintos tipos</h3>
+
+    <section>
+        <p>Hasta aquí, hemos podido ver que una página web es un archivo HTML en el que podemos incluir, entre otras cosas, textos formateados a nuestro gusto e imágenes (las veremos con detalle enseguida). Del mismo modo, un sitio web podrá ser considerado como el conjunto de archivos, principalmente páginas HTML e imágenes, que constituyen el contenido al que el navegante tiene acceso.</p>
+        <p>Sin embargo, no podríamos hablar de navegante o de navegación si estos archivos HTML no estuviesen debidamente conectados entre ellos y con el exterior de nuestro sitio por medio de enlaces hipertexto. En efecto, el atractivo original del HTML radica en la posible puesta en relación de los contenidos de los archivos introduciendo referencias bajo forma de enlaces que permitan un acceso rápido a la información deseada. De poco serviría en la red tener páginas aisladas a las que la gente no puede acceder y desde las que la gente no puede saltar a otras.</p>
+        <p>Un enlace puede ser fácilmente detectado por el usuario en una página. Basta con deslizar el puntero del ratón sobre las imágenes o el texto y ver como cambia de su forma original transformándose por regla general en una mano con un dedo señalador. Adicionalmente, estos enlaces suelen ir, en el caso de los textos, coloreados y subrayados para que el usuario no tenga dificultad en reconocerlos.</p>
+    </section>
+
+    <section>
+        <h2>Sintaxis de un enlace</h2>
+        <p>Para colocar un enlace, nos serviremos de las etiquetas A y su cierre. Dentro de la etiqueta de apertura deberemos especificar asimismo el destino del enlace. Este destino será introducido bajo forma de atributo, el cual lleva por nombre "href".</p>
+        <p>La sintaxis general de un enlace es por tanto de la forma:</p>
+        <pre>
+            <code>
+                &lt;a href=&quot;destino&quot;&gt;contenido&lt;/a&gt;
+            </code>
+        </pre>
+        Siendo el "contenido" un texto o una imagen. Es la parte de la página que se colocará activa y donde deberemos pulsar para acceder al enlace. Por su parte, "destino" será una página, un correo electrónico o un archivo.
+        Por ejemplo, un enlace a la home de DesarrolloWeb, tendría esta manera
+        <pre>
+            <code>
+                &lt;a href=&quot;http://www.desarrolloweb.com/&quot;&gt;Home de Desarrolloweb.com&lt;/a&gt;
+            </code>
+        </pre>
+        
+        <p>Ahora, si queremos que el contenido del enlace sea una imagen y no un texto, podremos colocar la correspondiente etiqueta IMG dentro de la etiqueta A.</p>
+        <pre>
+            <code>
+                &lt;a href=&quot;http://www.escuela.it&quot;&gt;&lt;img src=&quot;logo.jpg&quot;&gt;&lt;/a&gt;
+            </code>
+        </pre>
+            <p><b>Nota: </b>Todavía no hemos explicado la etiqueta IMG, pero no te preocupes porque más adelante encontrarás un apartado donde se explica cómo se trabaja con imágenes en HTML.</p>
+    </section>
+
+    <section>
+        <h2>El aspecto de los enlaces</h2>
+        <p>Nosotros mediante el HTML, y las hojas de estilo CSS, podemos definir el aspecto que tendrán los enlaces en una página. Sin embargo, ya de manera predeterminada el navegador los destaca para que los podamos distinguir. Generalmente encontraremos a los enlaces subrayados y coloreados en azul, aunque esta regla depende del navegador del usuario y de sus estilos definidos como predeterminados.</p>
+        <p>En el caso de las imágenes que sirvan de enlace, tradicionalmente aparecían encuadradas en un marco azul por defecto. Aunque ese estilo predeterminado también cambiará dependiendo del navegador y de hecho, en 2016, la mayoría de navegadores ya no ponen ese marco azul, así que tenemos un ejemplo de cómo los estilos predeterminados pueden cambiar con el tiempo y con versiones de navegador.</p>
+        <p>Por ese incierto estilo predeterminado siempre es interesante marcar por nosotros mismos el estilo que los enlaces deben tener en nuestra página. Ese estilo lo correcto es colocarlo en el código de CSS, pero también se puede definir en la etiqueta BODY. Eso es algo que se explicó en el artículo Atributos generales de la página.</p>
+    </section>
+
+    <section>
+        <h2>Tipos de enlaces</h2>
+        <p>Para estudiar en profundidad los enlaces tenemos que clasificarlos por su tipo, porque dependiendo ese tipo algunas cosas cambiarán a la hora de construirlos.</p>
+        <p>En función del destino los enlaces son clásicamente agrupados del siguiente modo:</p>
+        <ul>
+            <li>
+                <p><b>Enlaces internos:</b> los que se dirigen a otras partes dentro de la misma página.</p>
+            </li>
+            <li>
+                <p><b>Enlaces locales:</b> los que se dirigen a otras páginas del mismo sitio web.</p>
+            </li>
+            <li>
+                <p><b>Enlaces remotos:</b> los dirigidos hacia páginas de otros sitios web.</p>
+            </li>
+            <li>
+                <p><b>Enlaces con direcciones de correo:</b> para crear un mensaje de correo dirigido a una dirección.</p>
+            </li>
+            <li>
+                <p><b>Enlaces con archivos:</b> para que los usuarios puedan hacer download de ficheros.</p>
+            </li>
+        </ul>
+    </section>
+
+    <br>
+    <section>
+        <h2><img src="/Imagenes/Manual.png"> Manual</h2>
+        <h3><a href="/HTML/Principal.html">Manual de HTML</a></h3>
+    
+        <p><a href="/HTML/Parte1/ListasHTML/ListasDefinicion.html">Listas en HTML: Listas de definicion </a><a href="/HTML/Parte1/EnlacesHTML/EnlacesInternos.html">Enlaces internos</p>
+    </section>
+</body>
+</html>

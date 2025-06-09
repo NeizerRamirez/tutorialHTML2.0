@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces externos</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte1/EnlacesHTML/EnlacesExternos.png" width="100%" alt="prologo" >
+    </header>
+
+    <a href="/HTML/Principal.html"><img src="/Imagenes/Parte1/EnlacesHTML/EnlacesExternos.png" width="3%" height="3%" alt="Volver al inicio"> </a> 
+    
+    <p>> <a href="/HTML/Principal.html">Manual de HTML</a></p>
+
+    <br>
+
+    <p> <img src="/Imagenes/calendario.png"> 29 de octubre de 2001</p>
+
+    <h3>Vemos tres tipos de enlaces. Los dirigidos a otras páginas de otros webs, a direcciones de correo y a ficheros externos.</h3>
+
+    <section>
+        <p>A lo largo de los artículos anteriores del Manual de HTML hemos visto enlaces internos, dentro de la misma página, y los enlaces locales, que se dan cuando se referencian páginas dentro del mismo sitio web. Eran tipos de enlaces muy comunes, pero aun hay otros tipos que debemos de repasar para completar la información.</p>
+        <p>En este artículo abordaremos los últimos 3 tipos de enlaces que habíamos señalado. No tienen mucho que ver entre si, pero como son sencillos los agrupamos todos en el presente texto. Son enlaces a páginas externas (otros dominios), enlaces a direcciones de email y enlaces a archivos de descarga.</p>
+        <h2>Enlaces remotos</h2>
+        <p>Son los enlaces que se dirigen hacia páginas que se encuentran fuera de nuestro sitio web, es decir, cualquier otro documento que no forma parte de nuestro sitio. Generalmente nuestro sitio web estará en un dominio determinado, tipo example.com. Los enlaces remotos son los que van a páginas que estarían en otro dominio diferente.</p>
+        <p>Este tipo de enlaces es muy común y no representa ninguna dificultad. Simplemente colocamos en el atributo HREF de nuestra etiqueta A la URL o dirección de la página con la que queremos enlazar. Será algo parecido a esto.</p>
+        <pre>
+            <code>
+                &lt;a href=&quot;http://www.guiarte.com&quot;&gt;ir a guiarte.com&lt;/a&gt;
+            </code>
+        </pre>
+        <p>Sólo cabe destacar que todos las direcciones web (URLs) empiezan por http://, o https:// en el caso que la página de destino se sirva mediante un servidor seguro. Este tipo de rutas que comienzan por "http" también se conocen como "rutas absolutas". Cuando enlazas con páginas que están en otros dominios necesitas usar necesariamente rutas absolutas.</p>
+        <p><b>Nota: </b>La parte por la que inician las direcciones de sitios web (http://) nos indica que el protocolo por el que se accede es HTTP, el utilizado en la web. No debemos olvidarnos de colocarlas, porque si no lo hacemos, los enlaces serán tratados como enlaces locales a nuestro sitio.</p>
+        <p>Otra cosa interesante es que no tenemos que enlazar con una página web con el protocolo HTTP necesariamente. También podemos acceder a recursos a través de otros protocolos como el FTP. En tal caso, las direcciones de los recursos no comenzarán por http:// sino por ftp://.</p>
+    </section>
+
+    <section>
+        <h2>Enlaces a direcciones de correo</h2>
+        <p>Los enlaces a direcciones de correo son aquellos que al pincharlos nos abre un nuevo mensaje de correo electrónico dirigido a una dirección de mail determinada. Estos enlaces son muy habituales en las páginas web y resultan la manera más rápida de ofrecer al visitante una vía para el contacto con el propietario de la página.</p>
+        <p>Para colocar un enlace dirigido hacia una dirección de correo colocamos mailto: en el atributo href del enlace, seguido de la dirección de correo a la que se debe dirigir el enlace.</p>
+        <pre>
+            <code>
+                &lt;a href=&quot;mailto:eugim@desarrolloweb.com&quot;&gt;eugim@desarrolloweb.com&lt;/a&gt;
+            </code>
+        </pre>
+        <p>Este enlace se puede ver en funcionamiento aquí: miguel@desarrolloweb.com</p>
+        <p><b>Consejo:</b> Cuando coloques enlaces a direcciones de correo procura indicar en el contenido del enlace (lo que hay entre A y su cierre) la dirección de correo a la que se debe escribir. Esto es porque si un usuario no tiene configurado un programa de correo en su ordenador no podrá enviar mensajes, pero por lo menos podrá copiar la dirección de mail y escribir el correo a través de otro ordenador o un sistema web-mail.</p>
+        <p>Además de la dirección de correo del destinatario, también podemos colocar en el enlace el asunto del mensaje. Esto se consigue colocando después de la dirección de correo un interrogante, la palabra subject, un signo igual (=) y el asunto en concreto.</p>
+        <pre>
+            <code>
+                &lt;a href=&quot;mailto:eugim@desarrolloweb.com?subject=contacto%20a%20través%20de%20la%20pagina&quot;&gt;eugim@desarrolloweb.com&lt;/a&gt;
+            </code>
+        </pre>
+        Podemos colocar otros atributos del mensaje con una sintaxis parecida. En este caso indicamos también que el correo debe ir con copia a colabora@desarrolloweb.com.
+        <pre>
+            <code>
+                &lt;a href=&quot;mailto:miguel@desarrolloweb.com?subject=contacto%20a%20través%20de%20la%20pagina&amp;cc=colabora@desarrolloweb.com&quot;&gt;miguel@desarrolloweb.com&lt;/a&gt;
+            </code>
+        </pre>
+        
+        <p>Nota: El visitante de la página necesitará tener configurada una cuenta de correo electrónico en su sistema para enviar los mensajes. Lógicamente, si no tiene servicio de correo en el ordenador no se podrán enviar los mensajes y este sistema de contacto con el visitante no funcionará.</p>
+        <p>Más adelante abordaremos el tema de los formularios, mediante los cuales seremos capaces de implementar una serie de campos donde solicitar información de todo tipo, que luego se pueda enviar por email. Es una manera más usable en lo que respecta al contacto con el usuario. Ya fuera de este manual también tenemos un artículo en desarrolloweb que hace un análisis de las alternativas que existen para contacto con el navegante.</p>
+    </section>
+    <section>
+        <h2>Enlaces con archivos</h2>
+        <p>Este no es un tipo de enlace propiamente dicho, pero lo señalamos aquí porque son un tipo de enlaces muy habitual y que presenta alguna complicación para el usuario novato.</p>
+    
+        <p>El mecanismo es el mismo que hemos conocido en los enlaces locales y los enlaces remotos, con la única particularidad de que en vez de estar dirigidos hacia una página web está dirigido hacia un archivo de otro tipo.</p>
+    
+        <p>Si queremos enlazar con un archivo mi_fichero.zip que se encuentra en el mismo directorio que la página se escribiría un enlace así.</p>
+    
+    
+        <pre>
+            <code>
+                &lt;a href=&quot;mi_fichero.zip&quot;&gt;Descarga mi_fichero.zip&lt;/a&gt;
+            </code>
+        </pre>
+    
+        <p>Si pinchamos un enlace de este tipo nuestro navegador descargará el fichero, haciendo la pregunta típica de "Qué queremos hacer con el archivo. Abrirlo o guardarlo en disco".</p>
+    
+    
+        <p><b>Consejo:</b> No colocar en Internet archivos ejecutables directamente, sino archivos comprimidos. Por dos razones:</p>
+    
+        <p>El archivo ocupará menos, con lo que será más rápida su transferencia.</p>
+    
+        <p>Al preguntar al usuario lo que desea hacer con el fichero le ofrece la opción de abrirlo y guardarlo en disco. Nosotros generalmente desearemos que el usuario lo guarde en disco y no lo ejecute hasta que lo tenga en su disco duro. Si se decido a abrirlo en vez de guardarlo simplemente lo pondrá en marcha y cuando lo pare no se quedará guardado en su sistema. Si los archivos están comprimidos obligaremos al usuario a descomprimirlos en su disco duro antes de ponerlos en marcha, con lo que nos aseguramos que el usuario lo guarde en su ordenador antes de ejecutarlo.</p>
+    
+        <p>Si queremos enlazar hacia otro tipo de archivo como un PDF o un mundo VRML (Realidad virtual para Internet) lo seguimos haciendo de la misma manera. El navegador, si reconoce el tipo de archivo, es el responsable de abrirlo utilizando el conector adecuado para ello. Así, si por ejemplo enlazamos con un PDF pondrá el programa Acrobat Reader en funcionamiento para mostrar los contenidos. Si enlazamos con un mundo VRML pondrá en marcha el plug-in que el usuario tenga instalado para ver los mundos virtuales.</p>
+    
+        <p>Este sería un ejemplo de enlace a un documento PDF.</p>
+    
+        <pre>
+            <code>
+                &lt;a href=&quot;mi_documento.pdf&quot;&gt;Descarga el PDF&lt;/a&gt;
+            </code>
+        </pre>
+    </section>
+
+    <br>
+    <section>
+        <h2><img src="/Imagenes/Manual.png"> Manual</h2>
+        <h3><a href="/HTML/Principal.html">Manual de HTML</a></h3>
+    
+        <p> <a href="/HTML/Parte1/EnlacesHTML/EnlacesLocales.html">Enlaces locales</a> <a href="/HTML/Parte1/ImagenesYGraficos/Imagenes.html">Imagenes en HTML</a> </p>
+    </section>
+</body>
+</html>

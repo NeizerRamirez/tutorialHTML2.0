@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces internos</title>
+    <link rel="icon"  href="/Imagenes/Icono.ico">
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/Parte1/EnlacesHTML/EnlacesInternos.png" width="100%" alt="prologo" >
+    </header>
+
+    <a href="/HTML/Principal.html"><img src="/Imagenes/IconoHome.png" width="3%" height="3%" alt="Volver al inicio"> </a> 
+    
+    <p>> <a href="/HTML/Principal.html">Manual de HTML</a></p>
+
+    <br>
+
+    <img src="/Imagenes/calendario.png">
+    <p>29 de septiembre de 2016</p>
+
+    <h3>Los enlaces HTML que se hacen con otras partes de la misma página.</h3>
+
+    <section>
+        <p>Quizás "Enlaces internos" puede ser un poco ambiguo, porque podríamos pensar tanto en enlaces internos dentro del mismo sitio web o enlaces internos dentro de la misma página. Nosotros en este manual nos referimos a los los enlaces que apuntan a un lugar diferente dentro de la misma página. Llamamos "Enlaces locales" a los enlaces que apuntan a otra página dentro de mismo sitio web.</p>
+        <p>Este tipo de enlaces son esencialmente utilizados en páginas donde el acceso a los contenidos puede verse dificultado debido al gran tamaño del texto. Es un enlace poco habitual en páginas web como blogs o páginas comerciales, que presentan un producto o un servicio. Se encuentran más en páginas de referencia, donde además el contenido está dividido en diversas secciones y queremos poder navegar entre esas secciones que se encuentran dentro del mismo archivo HTML. Otro uso habitual de los enlaces internos es ofrecer al visitante la posibilidad de ir rápidamente al principio de la página, a la parte de arriba.</p>
+    </section>
+
+    <section>
+        <h2>Enlace y ancla</h2>
+        <p>Para crear un enlace de este tipo es necesario dos componentes, que para aclararnos los vamos a nombrar de la siguiente forma:</p>
+        <p>El enlace: Sería el link, lo que aparecerá en la página para que el usuario haga clic. Sería el enlace de origen propiamente dicho.</p>
+        <p>El ancla: Además se requiere una marca, para saber dónde se dirige el enlace. Es el destino donde nos llevará el navegador al pulsar el link. Le llamamos ancla porque nos permite anclar a esa posición otros enlaces.</p>
+        <p>Ambos elementos se crean con la misma etiqueta A, tanto el enlace como el ancla. Solo que usaremos distintos atributos dentro de esa etiqueta.</p>
+    </section>
+
+    <section>
+        <h2>Sintaxis de los enlaces en la misma página</h2>
+        <p>Veamos más claramente como funcionan estos enlaces con un ejemplo sencillo: Supongamos que queremos crear un enlace que apunte al final de la página. Lo primero será colocar nuestro enlace origen. Este enlace de origen es el que el usuario podrá hacer clic.</p>
+        <pre>
+            <code>
+                &lt;a href=&quot;#abajo&quot;&gt;Ir abajo&lt;/a&gt;
+            </code>
+        </pre>
+        <p>Como podéis ver, el contenido del enlace es el texto "Ir abajo" y el destino, #abajo, es un punto de la misma página que todavía no hemos definido. Ojo al símbolo "#": es él quien especifica al navegador que el enlace apunta a una sección en particular, a un punto interno dentro de la misma página.</p>
+        <p>En segundo lugar, hay que generar un enlace en el destino, al que hemos llamado "ancla". Este enlace no llevará contenido, puesto que no queremos que nadie lo pulse, sino que nos sirva de ancla. Tampoco llevará el atributo "href", porque no tiene que apuntar a ningún lugar, sino que le apuntarán a él. Para poder distinguirlo de otros posibles enlaces realizados dentro de la misma página a cada ancla se le asigna un nombre por medio del atributo "name". En este caso, la etiqueta que escribiremos será ésta:</p>
+        <pre>
+            <code>
+                &lt;a name=&quot;abajo&quot;&gt;&lt;/a&gt;
+            </code>
+        </pre>
+        <p>Para entender cómo crear los enlaces internos nos tenemos que fijar en el name="abajo" del ancla. Pues bien, si queremos crear un enlace interno a esta ancla, colocaremos en en enlace de origen el href="#abajo", o sea, el nombre del enlace más un "#" para que el navegador sepa que es un enlace interno.</p>
+    </section>
+
+    <section>
+        <h2>Enlaces útiles pero no tan habituales</h2>
+        <p>A decir verdad, estos enlaces, aunque útiles, no son los más extendidos de cuantos hay. La tendencia general es la de crear páginas (archivos) independientes con tamaños más reducidos enlazados entre ellos por enlaces locales (los veremos enseguida). De esta forma evitamos el exceso de tiempo de carga de un archivo y la introducción de exceso de información que pueda desviar la atención del usuario.</p>
+        <p>Una aplicación corriente de estos enlaces consiste en poner un pequeño índice al principio de nuestro documento donde introducimos enlaces origen a las diferentes secciones. Paralelamente, al final de cada sección introducimos un enlace que apunta al índice de manera que podamos guiar al navegante en la búsqueda de la información útil para él.</p>
+    </section>
+
+    
+    <br>
+    <section>
+        <h2><img src="/Imagenes/Manual.png"> Manual</h2>
+        <h3><a href="/HTML/Principal.html">Manual de HTML</a></h3>
+    
+        <p><a href="/HTML/Parte1/EnlacesHTML/Enlaces.html">Enlaces en HTML</a> <a href="/HTML/Parte1/EnlacesHTML/EnlacesLocales.html">Enlaces locales</a></p>
+    </section>
+
+    
+
+</body>
+</html>
